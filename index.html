@@ -42,11 +42,9 @@
 
 
 
-		
-
 
         <div class="wb-frmvld container">
-			<form action="#" method="get" id="validation-example">
+			<form action="#" method="get" id="validation-example" class="form-horizontal">
 				<div class="form-group">
 					<label class="required" for="department"><span class="field-name">What department do you work for?</span> <strong class="required">(required)</strong></label>
 					<input class="form-control" type="text" id="department" required="required" />
@@ -62,26 +60,25 @@
 			</fieldset>
 
 
-<div id="group">
 
-			<div id="cdtsYes" class="hidden">
-            <div class="form-group">
-                <label class="required" for="appName"><span class="field-name">What is your application name?</span> <strong class="required">(required)</strong></label>
-				<input class="form-control" id="appName" type="text" required="required" />
-				<input type="button" class="btn btn-default" value="Add application">
-			</div>
-			<ul>
-				<li>{ Application } <a class="btn btn-default mrgn-lft-md" href="#remove">Remove { Application }</a></li>
-			</ul>
-			<button class="btn btn-primary mrgn-bttm-md">Add another application</button>
-			<div class="form-group">
-				<label class="required" for="version"><span class="field-name">What version are you using?</span> <strong class="required">(required)</strong></label>
-				<input class="form-control" type="text" id="version" required="required" />
-			</div>
-			<div class="form-group">
-				<label class="required" for="languages"><span class="field-name">What language is your application using (Static (HTML), .NET, JAVA, PHP, etc)?</span> <strong class="required">(required)</strong></label>
-				<input class="form-control" type="text" id="languages" required="required" />
-			</div>
+		<div id="cdtsYes" class="hidden">
+			<fieldset>
+				<legend class="mrgn-tp-md">Application</legend>
+				<div class="form-group">
+					<label class="required" for="appName"><span class="field-name">Application name?</span> <strong class="required">(required)</strong></label>
+					<input class="form-control full-width" id="appName" type="text" required="required" />
+				</div>
+
+				<div class="form-group">
+					<label class="required" for="version"><span class="field-name">What version are you using?</span> <strong class="required">(required)</strong></label>
+					<input class="form-control" type="text" id="version" required="required" />
+				</div>
+				<div class="form-group">
+					<label class="required" for="languages"><span class="field-name">What language is your application using (Static (HTML), .NET, JAVA, PHP, etc)?</span> <strong class="required">(required)</strong></label>
+					<input class="form-control" type="text" id="languages" required="required" />
+				</div>
+			</fieldset>
+
 			<fieldset>
 				<legend class="required"><span class="field-name">Are you registered on GCPedia?</span> <strong class="required">(required)</strong></legend>
 				<div class="radio">
@@ -102,15 +99,24 @@
 			</div>
 		</div>
 			
-<div id="cdtsNo" class="hidden">
-	<p>CDTS NO</p>
-</div>
+		<div id="cdtsNo" class="hidden">
+			<fieldset>
+				<legend class="required"><span class="field-name">Have you heard of CDTS</span> <strong class="required">(required)</strong></legend>
+				<div class="radio">
+						<label for="heardYes"><input type="radio" name="heard" value="1" id="heardYes" required="required" />Yes</label>
+					</div>
+				<div class="radio">
+					<label for="heardNo"><input type="radio" name="heard" value="0" id="heardNo" />No</label>
+				</div>
+			</fieldset>
+		</div>
 
-
-</div>
-			<input type="submit" value="Submit" class="btn btn-primary" /> <input type="reset" value="Reset" class="btn btn-default" />
-			</form>
-	   </div>
+		<div class="mrgn-tp-md">
+			<input type="submit" value="Submit" class="btn btn-primary" /> 
+			<input type="reset" value="Reset" class="btn btn-default" />
+		</div>
+		</form>
+	</div>
 	   
 	<noscript>
 		<p>This form cannot be submitted without JavaScript.</p>
